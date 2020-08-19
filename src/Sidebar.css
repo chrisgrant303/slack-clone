@@ -1,5 +1,6 @@
 .sidebar {
     color: white;
+    flex: 0.3;
     background-color: var(--slack-color);
     border-top: 1px solid #49274b;
     max-width: 260px;
@@ -12,7 +13,7 @@
     padding: 13px;
 }
 
-.sidebar_header > .MuiSvgIcon-root {
+.sidebar_header>.MuiSvgIcon-root {
     padding: 8px;
     color: #49274b;
     font-size: 18px;
@@ -24,20 +25,20 @@
     flex: 1;
 }
 
-.sidebar_info > h2 {
+.sidebar_info>h2 {
     font-size: 15px;
     font-weight: 900;
     margin-bottom: 5px;
 }
 
-.sidebar_info > h3 {
+.sidebar_info>h3 {
     display: flex;
     align-items: center;
     font-size: 13px;
     font-weight: 400;
 }
 
-.sidebar_info >h3 > .MuiSvgIcon-root {
+.sidebar_info>h3>.MuiSvgIcon-root {
     font-size: 14px;
     margin-top: 1px;
     margin-right: 2px;
