@@ -11,6 +11,8 @@ import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 import AppsIcon from "@material-ui/icons/Apps";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import AddIcon from "@material-ui/icons/Add";
 
 
 function Sidebar() {
@@ -34,6 +36,12 @@ function Sidebar() {
             <SidebarOption Icon={AppsIcon} title="Apps" />
             <SidebarOption Icon={FileCopyIcon} title="File browser" />
             <SidebarOption Icon={ExpandLessIcon} title="Show less" />
+            <hr />
+            <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
+            <hr />
+            <SidebarOption Icon={AddIcon} addChannelOptions />
+
+            {/* Connect to dB and list all the channels */}
 
         </div>
     );
