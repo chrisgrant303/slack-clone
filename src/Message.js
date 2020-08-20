@@ -1,14 +1,16 @@
-import React from 'react';
-import './Message.css';
+import React from "react";
+import "./Message.css";
 
-function Message({ message, timestamp, user, userimage }) {
+function Message({ message, timestamp, user, userImage }) {
     return (
         <div className="message">
-            <img src={userimage} alt="" />
+            <img src={userImage} alt="" />
             <div className="message_info">
-                <h4>{user} <span className="message_timestamp">
-                    {new Date(timestamp.toDate()).toUTCString()}
-                </span>
+                <h4>
+                    {user}{" "}
+                    <span className="message_timestamp">
+                        {new Date(timestamp?.toDate()).toUTCString()}
+                    </span>
                 </h4>
                 <p>{message}</p>
             </div>
@@ -16,4 +18,4 @@ function Message({ message, timestamp, user, userimage }) {
     );
 }
 
-export default Message
+export default Message;
