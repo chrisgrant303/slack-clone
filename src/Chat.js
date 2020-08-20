@@ -1,6 +1,4 @@
-import React from 'react';
-import useEffect from 'react';
-import useState from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Chat.css";
 import { useParams } from 'react-router-dom';
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
@@ -16,14 +14,14 @@ function Chat() {
     useEffect(() => {
         if (roomId) {
             db.collection('rooms')
-                .document(roomId)
+                .doc(roomId)
                 .onSnapshot(snapshot => setRoomDetails(snapshot.data()));
         }
 
-        db.collection("rooms")
+        db.collection('rooms')
             .doc(roomId)
-            .collection("messages")
-            .orderBy("timestamp", 'asc')
+            .collection('messages')
+            .orderBy('timestamp', 'asc')
             .onSnapshot(snapshot =>
                 setRoomMessages(snapshot.docs.map((doc) => doc.data())))
     }, [roomId]);
@@ -46,13 +44,13 @@ function Chat() {
             </div>
 
             <div className="chat_messages">
-                {roomMessages.map(({ message, timestamp, user, userImage }))
+                {roomMessages.map(({ message, timestamp, user, userImage }) => (
                     < Message
-                    message={message}
-                    timestamp={timestamp}
-                    user={user}
-                    userImage={userImage}
-                 />
+                        message={message}
+                        timestamp={timestamp}
+                        user={user}
+                        userImage={userImage}
+                    />
                 ))}
             </div>
         </div>
