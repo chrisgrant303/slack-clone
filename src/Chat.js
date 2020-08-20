@@ -44,12 +44,12 @@ function Chat() {
             </div>
 
             <div className="chat_messages">
-                {roomMessages.map(({ message, timestamp, user, userImage }) => (
+                {roomMessages.map(({ message, timestamp, user, userimage }) => (
                     < Message
                         message={message}
                         timestamp={timestamp}
                         user={user}
-                        userImage={userImage}
+                        userimage={userimage}
                     />
                 ))}
             </div>
