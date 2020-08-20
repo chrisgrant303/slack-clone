@@ -16,19 +16,19 @@ function Login() {
                     type: actionTypes.SET_USER,
                     user: result.user
                 });
-            })
-                .catch((error) => {
-                    alert(error.message);
-                }));
+            }))
+            .catch((error) => {
+                alert(error.message);
+            });
     }
 
     return (
         <div className="login">
             <div className="login_container">
                 <img src="https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg" alt=""></img>
-                <h1>Sign in to Vantage Peak HQ</h1>
-                <p>vantagepeakvans.fakeslack.com</p>
-                <Button>Sign in with Google</Button>
+                <h1>Sign in to Custom Chat HQ</h1>
+                <p>customchat.fakeslack.com</p>
+                <Button onClick={signIn}>Sign in with Google</Button>
             </div>
         </div>
     )
