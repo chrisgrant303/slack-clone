@@ -1,7 +1,7 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCFFtvA9K34D5wbwJtuZIXiJllKayspWJg",
+    apiKey: "******************************",
     authDomain: "slack-clone-22a14.firebaseapp.com",
     databaseURL: "https://slack-clone-22a14.firebaseio.com",
     projectId: "slack-clone-22a14",
